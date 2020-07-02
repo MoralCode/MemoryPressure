@@ -47,70 +47,255 @@ sub getprocinfo {
 
 while(<>){
     if(/monitors/){
-        # print "gpu_temp\tinteger\n";
-        # print "gpu_fan_speed\tinteger\n";
-        # print "gpu_core_usage\tinteger\n";
-        # print "gpu_core_clock\tinteger\n";
-        # print "gpu_mem_mib\tinteger\n";
-        # print "gpu_mem_clock\tinteger\n";
-        # print "gpu_video_decode\tinteger\n";
-        # print "gpu_video_encode\tinteger\n";
+        print "Pressure/Memory/m_some_10sec\tfloat\n";
+        print "Pressure/Memory/m_some_60sec\tfloat\n";
+        print "Pressure/Memory/m_some_300sec\tfloat\n";
+        print "Pressure/Memory/m_some_total\tinteger\n";
+        print "Pressure/Memory/m_full_10sec\tfloat\n";
+        print "Pressure/Memory/m_full_60sec\tfloat\n";
+        print "Pressure/Memory/m_full_300sec\tfloat\n";
+        print "Pressure/Memory/m_full_total\tinteger\n";
+
+        print "Pressure/CPU/c_some_10sec\tfloat\n";
+        print "Pressure/CPU/c_some_60sec\tfloat\n";
+        print "Pressure/CPU/c_some_300sec\tfloat\n";
+        print "Pressure/CPU/c_some_total\tinteger\n";
+        print "Pressure/CPU/c_full_10sec\tfloat\n";
+        print "Pressure/CPU/c_full_60sec\tfloat\n";
+        print "Pressure/CPU/c_full_300sec\tfloat\n";
+        print "Pressure/CPU/c_full_total\tinteger\n";
+
+        print "Pressure/IO/i_some_10sec\tfloat\n";
+        print "Pressure/IO/i_some_10sec\tfloat\n";
+        print "Pressure/IO/i_some_10sec\tfloat\n";
+        print "Pressure/IO/i_some_total\tinteger\n";
+        print "Pressure/IO/i_full_10sec\tfloat\n";
+        print "Pressure/IO/i_full_10sec\tfloat\n";
+        print "Pressure/IO/i_full_10sec\tfloat\n";
+        print "Pressure/IO/i_full_total\tinteger\n";
     }
-    # if(/gpu_temp/){
-    #     if(/\?/){
-    #         print "GPU Temp\t0\t100\t°C\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_fan_speed/){
-    #     if(/\?/){
-    #         print "GPU Fan Speed\t0\t100\t%\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=fan.speed --format=csv,noheader,nounits` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_core_usage/){
-    #     if(/\?/){
-    #         print "GPU Core Usage\t0\t100\t%\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_core_clock/){
-    #     if(/\?/){
-    #         print "GPU Core Clock\t0\t2500\tMhz\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=clocks.current.graphics --format=csv,noheader,nounits` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_mem_mib/){
-    #     if(/\?/){
-    #         print "GPU Memory Usage\t0\t".`lsmod | grep -q nvidia && nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | perl -pe 'chomp'`."\tMiB\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_mem_clock/){
-    #     if(/\?/){
-    #         print "GPU Memory Clock\t0\t8000\tMhz\n";
-    #     }else{
-    #         print `nvidia-smi --query-gpu=clocks.current.memory --format=csv,noheader,nounits` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_video_decode/){
-    #     if(/\?/){
-    #         print "GPU Decoding\t0\t100\t%\n";
-    #     }else{
-    #         print `nvidia-smi dmon -c 1 -s u | sed s/#// | awk '{print \$5}' | tail -n 1` unless $no_nvidia;
-    #     }
-    # }
-    # if(/gpu_video_encode/){
-    #     if(/\?/){
-    #         print "GPU Encoding\t0\t100\t%\n";
-    #     }else{
-    #         print `nvidia-smi dmon -c 1 -s u | sed s/#// | awk '{print \$4}' | tail -n 1` unless $no_nvidia;
-    #     }
-    # }
+    
+
+    ##     ## ######## ##     ##  #######  ########  ##    ## 
+    ###   ### ##       ###   ### ##     ## ##     ##  ##  ##  
+    #### #### ##       #### #### ##     ## ##     ##   ####   
+    ## ### ## ######   ## ### ## ##     ## ########     ##    
+    ##     ## ##       ##     ## ##     ## ##   ##      ##    
+    ##     ## ##       ##     ## ##     ## ##    ##     ##    
+    ##     ## ######## ##     ##  #######  ##     ##    ##    
+
+
+    if(/m_some_10sec/){
+        if(/\?/){
+            print "Some (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'some'}{'10sec'}\n");
+        }
+    }
+    if(/m_some_60sec/){
+        if(/\?/){
+            print "Some (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'some'}{'60sec'}\n");
+        }
+    }
+    if(/m_some_300sec/){
+        if(/\?/){
+            print "Some (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'some'}{'300sec'}\n");
+        }
+    }
+    if(/m_some_total/){
+        if(/\?/){
+            print "Some Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'some'}{'total'}\n");
+        }
+    }
+    if(/m_full_10sec/){
+        if(/\?/){
+            print "Full (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'full'}{'10sec'}\n");
+        }
+    }
+    if(/m_full_60sec/){
+        if(/\?/){
+            print "Full (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'full'}{'60sec'}\n");
+        }
+    }
+    if(/m_full_300sec/){
+        if(/\?/){
+            print "Full (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'full'}{'300sec'}\n");
+        }
+    }
+    if(/m_full_total/){
+        if(/\?/){
+            print "Full Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "memory" );  
+            print("$data{'full'}{'total'}\n");
+        }
+    }
+
+
+     ######  ########  ##     ##                              
+    ##    ## ##     ## ##     ##                              
+    ##       ##     ## ##     ##                              
+    ##       ########  ##     ##                              
+    ##       ##        ##     ##                              
+    ##    ## ##        ##     ##                              
+     ######  ##         ####### 
+
+    if(/c_some_10sec/){
+        if(/\?/){
+            print "Some (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'some'}{'10sec'}\n");
+        }
+    }
+    if(/c_some_60sec/){
+        if(/\?/){
+            print "Some (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'some'}{'60sec'}\n");
+        }
+    }
+    if(/c_some_300sec/){
+        if(/\?/){
+            print "Some (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'some'}{'300sec'}\n");
+        }
+    }
+    if(/c_some_total/){
+        if(/\?/){
+            print "Some Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'some'}{'total'}\n");
+        }
+    }
+    if(/c_full_10sec/){
+        if(/\?/){
+            print "Full (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'full'}{'10sec'}\n");
+        }
+    }
+    if(/c_full_60sec/){
+        if(/\?/){
+            print "Full (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'full'}{'60sec'}\n");
+        }
+    }
+    if(/c_full_300sec/){
+        if(/\?/){
+            print "Full (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'full'}{'300sec'}\n");
+        }
+    }
+    if(/c_full_total/){
+        if(/\?/){
+            print "Full Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "cpu" );  
+            print("$data{'full'}{'total'}\n");
+        }
+    }
+
+    ####  #######                                             
+     ##  ##     ##                                            
+     ##  ##     ##                                            
+     ##  ##     ##                                            
+     ##  ##     ##                                            
+     ##  ##     ##                                            
+    ####  ####### 
+
+    if(/i_some_10sec/){
+        if(/\?/){
+            print "Some (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'some'}{'10sec'}\n");
+        }
+    }
+    if(/i_some_60sec/){
+        if(/\?/){
+            print "Some (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'some'}{'60sec'}\n");
+        }
+    }
+    if(/i_some_300sec/){
+        if(/\?/){
+            print "Some (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'some'}{'300sec'}\n");
+        }
+    }
+    if(/i_some_total/){
+        if(/\?/){
+            print "Some Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'some'}{'total'}\n");
+        }
+    }
+    if(/i_full_10sec/){
+        if(/\?/){
+            print "Full (10-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'full'}{'10sec'}\n");
+        }
+    }
+    if(/i_full_60sec/){
+        if(/\?/){
+            print "Full (60-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'full'}{'60sec'}\n");
+        }
+    }
+    if(/i_full_300sec/){
+        if(/\?/){
+            print "Full (300-sec)\t0\t100\t%\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'full'}{'300sec'}\n");
+        }
+    }
+    if(/i_full_total/){
+        if(/\?/){
+            print "Full Stall Time\t0\t0\tus\n";
+        }else{
+            my %data = getprocinfo( "io" );  
+            print("$data{'full'}{'total'}\n");
+        }
+    }
+    
     print "ksysguardd> ";
 }
