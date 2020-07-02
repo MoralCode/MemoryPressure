@@ -90,7 +90,7 @@ while(<>){
             print "Some (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'some'}{'avg10'}\n");
+            print("$data{'some'}{'avg10'}");
         }
     }
     if(/m_some_60sec/){
@@ -98,7 +98,7 @@ while(<>){
             print "Some (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'some'}{'avg60'}\n");
+            print("$data{'some'}{'avg60'}");
         }
     }
     if(/m_some_300sec/){
@@ -106,7 +106,7 @@ while(<>){
             print "Some (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'some'}{'avg300'}\n");
+            print("$data{'some'}{'avg300'}");
         }
     }
     if(/m_some_total/){
@@ -114,7 +114,7 @@ while(<>){
             print "Some Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'some'}{'total'}\n");
+            print("$data{'some'}{'total'}");
         }
     }
     if(/m_full_10sec/){
@@ -122,7 +122,7 @@ while(<>){
             print "Full (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'full'}{'avg10'}\n");
+            print("$data{'full'}{'avg10'}");
         }
     }
     if(/m_full_60sec/){
@@ -130,7 +130,7 @@ while(<>){
             print "Full (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'full'}{'avg60'}\n");
+            print("$data{'full'}{'avg60'}");
         }
     }
     if(/m_full_300sec/){
@@ -138,7 +138,7 @@ while(<>){
             print "Full (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'full'}{'avg300'}\n");
+            print("$data{'full'}{'avg300'}");
         }
     }
     if(/m_full_total/){
@@ -146,7 +146,7 @@ while(<>){
             print "Full Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "memory" );  
-            print("$data{'full'}{'total'}\n");
+            print("$data{'full'}{'total'}");
         }
     }
 
@@ -164,7 +164,7 @@ while(<>){
             print "Some (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'some'}{'avg10'}\n");
+            print("$data{'some'}{'avg10'}");
         }
     }
     if(/c_some_60sec/){
@@ -172,7 +172,7 @@ while(<>){
             print "Some (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'some'}{'avg60'}\n");
+            print("$data{'some'}{'avg60'}");
         }
     }
     if(/c_some_300sec/){
@@ -180,7 +180,7 @@ while(<>){
             print "Some (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'some'}{'avg300'}\n");
+            print("$data{'some'}{'avg300'}");
         }
     }
     if(/c_some_total/){
@@ -188,7 +188,7 @@ while(<>){
             print "Some Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'some'}{'total'}\n");
+            print("$data{'some'}{'total'}");
         }
     }
     if(/c_full_10sec/){
@@ -196,7 +196,7 @@ while(<>){
             print "Full (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'full'}{'avg10'}\n");
+            print("$data{'full'}{'avg10'}");
         }
     }
     if(/c_full_60sec/){
@@ -204,7 +204,7 @@ while(<>){
             print "Full (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'full'}{'avg60'}\n");
+            print("$data{'full'}{'avg60'}");
         }
     }
     if(/c_full_300sec/){
@@ -212,7 +212,7 @@ while(<>){
             print "Full (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'full'}{'avg300'}\n");
+            print("$data{'full'}{'avg300'}");
         }
     }
     if(/c_full_total/){
@@ -220,7 +220,7 @@ while(<>){
             print "Full Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "cpu" );  
-            print("$data{'full'}{'total'}\n");
+            print("$data{'full'}{'total'}");
         }
     }
 
@@ -237,7 +237,7 @@ while(<>){
             print "Some (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'some'}{'avg10'}\n");
+            print("$data{'some'}{'avg10'}");
         }
     }
     if(/i_some_60sec/){
@@ -245,7 +245,7 @@ while(<>){
             print "Some (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'some'}{'avg60'}\n");
+            print("$data{'some'}{'avg60'}");
         }
     }
     if(/i_some_300sec/){
@@ -253,7 +253,7 @@ while(<>){
             print "Some (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'some'}{'avg300'}\n");
+            print("$data{'some'}{'avg300'}");
         }
     }
     if(/i_some_total/){
@@ -261,7 +261,7 @@ while(<>){
             print "Some Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'some'}{'total'}\n");
+            print("$data{'some'}{'total'}");
         }
     }
     if(/i_full_10sec/){
@@ -269,7 +269,7 @@ while(<>){
             print "Full (10-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'full'}{'avg10'}\n");
+            print("$data{'full'}{'avg10'}");
         }
     }
     if(/i_full_60sec/){
@@ -277,7 +277,7 @@ while(<>){
             print "Full (60-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'full'}{'avg60'}\n");
+            print("$data{'full'}{'avg60'}");
         }
     }
     if(/i_full_300sec/){
@@ -285,7 +285,7 @@ while(<>){
             print "Full (300-sec)\t0\t100\t%\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'full'}{'avg300'}\n");
+            print("$data{'full'}{'avg300'}");
         }
     }
     if(/i_full_total/){
@@ -293,9 +293,9 @@ while(<>){
             print "Full Stall Time\t0\t0\tus\n";
         }else{
             my %data = getprocinfo( "io" );  
-            print("$data{'full'}{'total'}\n");
+            print("$data{'full'}{'total'}");
         }
     }
-    
+
     print "ksysguardd> ";
 }
