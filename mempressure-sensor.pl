@@ -66,12 +66,12 @@ while(<>){
         print "Pressure/CPU/c_full_total\tinteger\n";
 
         print "Pressure/IO/i_some_10sec\tfloat\n";
-        print "Pressure/IO/i_some_10sec\tfloat\n";
-        print "Pressure/IO/i_some_10sec\tfloat\n";
+        print "Pressure/IO/i_some_60sec\tfloat\n";
+        print "Pressure/IO/i_some_300sec\tfloat\n";
         print "Pressure/IO/i_some_total\tinteger\n";
         print "Pressure/IO/i_full_10sec\tfloat\n";
-        print "Pressure/IO/i_full_10sec\tfloat\n";
-        print "Pressure/IO/i_full_10sec\tfloat\n";
+        print "Pressure/IO/i_full_600sec\tfloat\n";
+        print "Pressure/IO/i_full_300sec\tfloat\n";
         print "Pressure/IO/i_full_total\tinteger\n";
     }
     
