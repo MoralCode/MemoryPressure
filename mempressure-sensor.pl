@@ -1,17 +1,5 @@
 #!/usr/bin/perl -w
 
-# act as a KSysGuard sensor
-# provides NVIDIA GPU info via `nvidia-smi`
-
-# Usage:
-# 1. Save this script, make it executable and move it to a directory in your $PATH
-# 2. Save this ksysguard sensor file for Nvidia: https://gist.github.com/Sporif/31f0d8d9efc3315752aa4031f7080d79
-# 2. In KSysGuard's menu, open "File > Import Tab From File option"
-# 3. Open the sensor file (nvidia.srgd)
-
-# See Also
-# https://techbase.kde.org/Development/Tutorials/Sensors
-
 $|=1;
 
 print "ksysguardd 1.2.0\n";
