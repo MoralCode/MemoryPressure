@@ -47,32 +47,32 @@ sub getprocinfo {
 
 while(<>){
     if(/monitors/){
-        print "Pressure/Memory/m_some_10sec\tfloat\n";
-        print "Pressure/Memory/m_some_60sec\tfloat\n";
-        print "Pressure/Memory/m_some_300sec\tfloat\n";
-        print "Pressure/Memory/m_some_total\tinteger\n";
-        print "Pressure/Memory/m_full_10sec\tfloat\n";
-        print "Pressure/Memory/m_full_60sec\tfloat\n";
-        print "Pressure/Memory/m_full_300sec\tfloat\n";
-        print "Pressure/Memory/m_full_total\tinteger\n";
+        print "Memory/m_some_10sec\tfloat\n";
+        print "Memory/m_some_60sec\tfloat\n";
+        print "Memory/m_some_300sec\tfloat\n";
+        print "Memory/m_some_total\tinteger\n";
+        print "Memory/m_full_10sec\tfloat\n";
+        print "Memory/m_full_60sec\tfloat\n";
+        print "Memory/m_full_300sec\tfloat\n";
+        print "Memory/m_full_total\tinteger\n";
 
-        print "Pressure/CPU/c_some_10sec\tfloat\n";
-        print "Pressure/CPU/c_some_60sec\tfloat\n";
-        print "Pressure/CPU/c_some_300sec\tfloat\n";
-        print "Pressure/CPU/c_some_total\tinteger\n";
-        print "Pressure/CPU/c_full_10sec\tfloat\n";
-        print "Pressure/CPU/c_full_60sec\tfloat\n";
-        print "Pressure/CPU/c_full_300sec\tfloat\n";
-        print "Pressure/CPU/c_full_total\tinteger\n";
+        print "CPU/c_some_10sec\tfloat\n";
+        print "CPU/c_some_60sec\tfloat\n";
+        print "CPU/c_some_300sec\tfloat\n";
+        print "CPU/c_some_total\tinteger\n";
+        print "CPU/c_full_10sec\tfloat\n";
+        print "CPU/c_full_60sec\tfloat\n";
+        print "CPU/c_full_300sec\tfloat\n";
+        print "CPU/c_full_total\tinteger\n";
 
-        print "Pressure/IO/i_some_10sec\tfloat\n";
-        print "Pressure/IO/i_some_60sec\tfloat\n";
-        print "Pressure/IO/i_some_300sec\tfloat\n";
-        print "Pressure/IO/i_some_total\tinteger\n";
-        print "Pressure/IO/i_full_10sec\tfloat\n";
-        print "Pressure/IO/i_full_600sec\tfloat\n";
-        print "Pressure/IO/i_full_300sec\tfloat\n";
-        print "Pressure/IO/i_full_total\tinteger\n";
+        print "IO/i_some_10sec\tfloat\n";
+        print "IO/i_some_60sec\tfloat\n";
+        print "IO/i_some_300sec\tfloat\n";
+        print "IO/i_some_total\tinteger\n";
+        print "IO/i_full_10sec\tfloat\n";
+        print "IO/i_full_600sec\tfloat\n";
+        print "IO/i_full_300sec\tfloat\n";
+        print "IO/i_full_total\tinteger\n";
     }
     
 
