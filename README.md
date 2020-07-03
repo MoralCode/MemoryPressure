@@ -27,14 +27,3 @@ based on https://gist.github.com/Sporif/4ce63f7b6eea691bdbb18905a9589169
 
 ### See Also
  - https://techbase.kde.org/Development/Tutorials/Sensors
-
-
- ## Data Types:
-https://invent.kde.org/search?utf8=%E2%9C%93&search=registerMonitor&group_id=1568&project_id=2098&scope=&search_code=true&snippets=false&repository_ref=master&nav_source=navbar
- Integer - 
- float -
- Table -
- listview - 
- logfile - 
-
-
