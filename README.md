@@ -2,6 +2,9 @@
 
 A simple perl script that acts as a KSysGuardd remote machine to display memory pressure information from /proc/pressure on kernels that support it (5.0+).
 
+![screenshot of KSysGuard showing repetitive patterns of high IO pressure caused by baloo_file_extractor](./img/baloo_file_extractor-iopressure.png)
+A screenshot of KSysGuard showing repetitive patterns of high IO pressure caused by baloo_file_extractor
+
 ## Usage:
  1. Clone this repo
  2. Run `generate.sh` to generate an `.sgrd` file. 
