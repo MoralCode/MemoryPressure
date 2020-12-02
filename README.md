@@ -20,6 +20,7 @@ This setup relies on the location of `pressure-sensor.pl` being constant. So be 
 ## Future Improvements
 
 - [ ] theres a lot of very simiar code to get the values from the double-nested Hash. May be nice to find a way to simplify this so that it returns the value on the fly when receiving a command from ksysguard? (i.e. it determines the value to return based on the name of the sensor entered)
+- [ ] potentially create a new system tray widget for displaying this data or integrate it into an existing widget (see: https://zren.github.io/kde/docs/widget/)
 - [ ] add some kind of external logging
 - [ ] I dont know if there's any performance penalty for reading from `/proc` many times per second as KSysGuard will probably do if you have the refresh frequency super high and many many graphs, but it would be nice to try and optimize the performance and memory usage of this so that it maybe does a tiny bit of caching to avoid fetching the full data from `/proc` and throwing it away after using just one value when there may be many values being polled for. 
 - [ ] Maybe make this sort of thing work for the "Task manager" utilities for other desktop environments (i.e. gnome)
