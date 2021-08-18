@@ -70,7 +70,7 @@ while(<>){
         print "IO/i_some_300sec\tfloat\n";
         print "IO/i_some_total\tinteger\n";
         print "IO/i_full_10sec\tfloat\n";
-        print "IO/i_full_600sec\tfloat\n";
+        print "IO/i_full_60sec\tfloat\n";
         print "IO/i_full_300sec\tfloat\n";
         print "IO/i_full_total\tinteger\n";
     }
