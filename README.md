@@ -30,4 +30,8 @@ This setup relies on the location of `pressure-sensor.pl` being constant. So be 
 based on https://gist.github.com/Sporif/4ce63f7b6eea691bdbb18905a9589169
 
 ### See Also
- - https://techbase.kde.org/Development/Tutorials/Sensors
+ - https://lwn.net/Articles/753840/ about the /proc/pressure feature
+#### ksysguard
+ - KSysguard sensor development https://techbase.kde.org/Development/Tutorials/Sensors
+ - libksysguard https://develop.kde.org/docs/extend/sensor-faces/
+ - https://bugs.kde.org/show_bug.cgi?id=58154
